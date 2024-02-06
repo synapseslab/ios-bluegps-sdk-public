@@ -51,7 +51,7 @@ The SDK is made up of one main component named `BlueGPS` that comes in the form 
 >
 > The most straightforward way to get ready with the SDK is to import it through SPM:
 >
-> **Xcode** 􀄫 File 􀄫 **Add package dependencies**
+> **Xcode** ➔ File ➔ **Add package dependencies**
 >
 > In the url field insert:
 >
@@ -59,7 +59,7 @@ The SDK is made up of one main component named `BlueGPS` that comes in the form 
 >
 > You will end with the package correctly added as a dependency in your project:
 >
-> <img src="/Users/valvoline/Sources/ios-bluegps-sdk/Documentation/images/image-20240205100849618.png" alt="image-20240205100849618" style="zoom: 33%;" />
+> <img src="images/image-20240205100849618.png" alt="image-20240205100849618" style="zoom: 33%;" />
 
 
 
@@ -114,7 +114,7 @@ To initialize the SDK, the first thing to do is to instruct correctly the engine
 
 The SDK could be configured either from your app Info.plist or programmatically. Specifically the following keys are required at a minimum to ensure everything is working properly:
 
-![image-20240205210929103](/Users/valvoline/Sources/ios-bluegps-sdk/Documentation/images/image-20240205210929103.png)
+![image-20240205210929103](images/image-20240205210929103.png)
 
 > [!TIP]
 >
