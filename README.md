@@ -55,7 +55,7 @@ The SDK is made up of one main component named `BlueGPS` that comes in the form 
 >
 > In the url field insert:
 >
-> https://github.com/synapseslab/bluegps-ios-sdk
+> https://github.com/synapseslab/ios-bluegps-sdk-public
 >
 > You will end with the package correctly added as a dependency in your project:
 >
@@ -65,7 +65,7 @@ The SDK is made up of one main component named `BlueGPS` that comes in the form 
 
 Alternatively, but not recommended, you could add the SDK *manually* in your project by downloading the last **xcframework.zip** from 
 
-https://github.com/synapseslab/bluegps-ios-sdk
+https://github.com/synapseslab/ios-bluegps-sdk-public
 
 and put it into your project.
 
