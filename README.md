@@ -112,6 +112,8 @@ To ensure reliability and smoothness into user positioning we strongly suggest t
 
 To initialize the SDK, the first thing to do is to instruct correctly the engine in order to store all the required informations into an EnvironmentModel used along the SDK, as well as to configure the authentication mechanism.
 
+
+
 The SDK could be configured either from your app Info.plist or programmatically. Specifically the following keys are required at a minimum to ensure everything is working properly:
 
 ![image-20240205210929103](images/image-20240205210929103.png)
@@ -174,10 +176,44 @@ BlueGPS relies on Keycloak as authentication manager. Once the SDK is setup, you
 - loginMode, indicate if the default login type is **USER** or **GUEST**. Contact our technical support if in dubt about that.
 
   
+  
+  All parameters should be filled according to the received documentation from our technical staff. If in dubt, contact Synapses technical support to have the proper settings assigned to your app.
+  
+  
 
-> [!TIP]
+> [!IMPORTANT]
 >
-> All parameters should be filled according to the received documentation from our technical staff. If in dubt, contact Synapses technical support to have the proper settings assigned to your app.
+> Authentication Mechanism is following OAuth standard. To do that, you need to be sure that your ``redirectURI`` schema is present into your App's Info.plist as a valid ``CFBundleURLTypes``. For more informations, see Apple's reference docs at:
+>
+> https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleurltypes
+
+
+As an example, let's assume that your ``redirectURI`` is as follow:
+
+```
+myAppSchema://some.url.goes.here
+```
+
+
+
+Your ``CFBundleURLTypes`` key into your App's Info.plist should reflect that as follow:
+
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+	<dict>
+		<key>CFBundleTypeRole</key>
+		<string>Viewer</string>
+		<key>CFBundleURLName</key>
+		<string>myAppSchema</string>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<string>myAppSchema</string>
+		</array>
+	</dict>
+</array>
+```
+
 
 
 Once you have filled correctly your Info.plist you are ready to fire the **network setup** as follow:
