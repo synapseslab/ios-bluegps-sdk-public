@@ -896,7 +896,29 @@ mapView?.showResourceOnMap(resources: resources, { result, error in
 })
 ```
 
+### 5.1.24 setDarkMode
 
+```swift
+mapView?.setDarkMode(_ mode: Bool, _ callback: ((String?, Error?) -> Void)? = nil)
+```
+
+Set the actual light/dark mode configuration passed as parameter.
+
+Return a *unique-key* identifying the current operation.
+
+Example:
+
+```swift
+mapView?.setDarkMode(true) { operationId, error in
+	if let operationId = operationId {
+   		print(style)
+    } else if let error = error {
+	    print(error)
+    }
+}
+```
+
+### 
 
 <div style="page-break-after: always"></div>
 
