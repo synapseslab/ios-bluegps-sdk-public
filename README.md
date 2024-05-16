@@ -896,10 +896,12 @@ mapView?.showResourceOnMap(resources: resources, { result, error in
 })
 ```
 
+
+
 ### 5.1.24 setDarkMode
 
 ```swift
-mapView?.setDarkMode(_ mode: Bool, _ callback: ((String?, Error?) -> Void)? = nil)
+public func setDarkMode(_ mode: Bool, _ callback: ((String?, Error?) -> Void)? = nil)
 ```
 
 Set the actual light/dark mode configuration passed as parameter.
@@ -918,7 +920,31 @@ mapView?.setDarkMode(true) { operationId, error in
 }
 ```
 
-### 
+
+
+### 5.1.24 setCompass
+
+```swift
+public func setCompass(_ degree: Double, _ callback: ((String?, Error?) -> Void)? = nil)
+```
+
+Set the compass **degree** rotation.
+
+Return a *unique-key* identifying the current operation.
+
+Example:
+
+```swift
+mapView?.setCompass(90) { operationId, error in
+	if let operationId = operationId {
+   		print(style)
+    } else if let error = error {
+	    print(error)
+    }
+}
+```
+
+<div style="page-break-after: always"></div>
 
 <div style="page-break-after: always"></div>
 
@@ -1876,6 +1902,29 @@ public func getElementResourceBy(id: String) async throws -> Resource
 ```swift
 public func setFavorite(resourceId: String,
                         favourite: Bool) async throws -> ResponseMessage
+```
+
+
+
+### 12.12 getAvailableSlots
+
+Get available slots for a specific **date** *(optional)* for a **resourceId** or a **bookingId** with a specific **recourceType**.
+
+```swift
+public func getAvailableSlots(resourceId: String? = nil,
+                              bookingId: String? = nil,
+                              resourceType: ResourceType,
+                              date: String? = nil) async throws -> [[String]]
+```
+
+
+
+### 12.13 submitPositions
+
+Submit an array of **positions** to the backend.
+
+```swift
+public func submitPosition(position: [BGPGPSPosition]) async throws -> ResponseMessage
 ```
 
 
