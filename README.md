@@ -1028,6 +1028,86 @@ mapView?.getPositionMarker({ position, error in
 })
 ```
 
+### 5.1.30 resetPath
+
+```swift
+public func resetPath(_ callback: ((String?, Error?) -> Void)? = nil)
+```
+
+Remove paths drawn on map.
+
+Return a *unique-key* identifying the current operation.
+
+Example:
+
+```swift
+mapView?.resetPath({ operationId, error in
+	//...
+})
+```
+
+<div style="page-break-after: always"></div>
+
+### 5.1.31 resetDataAndTag
+
+```swift
+public func resetDataAndTag(_ callback: ((String?, Error?) -> Void)? = nil)
+```
+
+Remove paths, resources and tag drawn on map.
+
+Return a *unique-key* identifying the current operation.
+
+Example:
+
+```swift
+mapView?.resetDataAndTag({ operationId, error in
+	//...
+})
+```
+
+<div style="page-break-after: always"></div>
+
+### 5.1.32 resetAll
+
+```swift
+public func resetAll(_ callback: ((String?, Error?) -> Void)? = nil)
+```
+
+Remove everything drawn on map.
+
+Return a *unique-key* identifying the current operation.
+
+Example:
+
+```swift
+mapView?.resetAll({ operationId, error in
+	//...
+})
+```
+
+<div style="page-break-after: always"></div>
+
+### 5.1.33 setTag
+
+```swift
+public func setTag(_ tagId: String, 
+                   follow: Bool = true, 
+                   _ callback: ((String?, Error?) -> Void)? = nil)
+```
+
+Force draw / redraw tag on map, optionally specify follow behaviour.
+
+Return a *unique-key* identifying the current operation.
+
+Example:
+
+```swift
+mapView?.setTag("0123456789") { operationId, error in
+	//...
+}
+```
+
 <div style="page-break-after: always"></div>
 
 
