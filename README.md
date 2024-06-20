@@ -1108,6 +1108,26 @@ mapView?.setTag("0123456789") { operationId, error in
 }
 ```
 
+### 5.1.34 resetPathAndData
+
+```swift
+public func resetPathAndData(_ callback: ((String?, Error?) -> Void)? = nil) {
+```
+
+FRemove everything drawn on map but keep tagid information on backend.
+
+Return a *unique-key* identifying the current operation.
+
+Example:
+
+```swift
+mapView?.resetPathAndData({ operationId, error in
+	//...
+})
+```
+
+<div style="page-break-after: always"></div>
+
 <div style="page-break-after: always"></div>
 
 
