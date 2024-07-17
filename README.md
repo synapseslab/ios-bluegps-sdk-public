@@ -1794,15 +1794,27 @@ public struct AreaWithTagsInside: Codable {
 }
 ```
 
-
-
 <div style="page-break-after: always"></div>
 
-## 12.0 Booking
+## 11.1 Get current position
+
+In the case that integrator needs to get actual position of a specific `tagID`, SynapsesSDK provides a way to do that.
+
+```swift
+public func getCurrentPosition(_ tagID: String) async throws -> MapPositionModel
+```
+
+**getCurrentPosition** return the actual position (if any) of the specified tag.
+
+If no position is present at the moment, the call throws with a 404 (not found) error.
+
+
+
+# 12.0 Booking
 
 BlueGPS provides several built-in capabilities for handling the booking workflow in your environment.
 
-
+<div style="page-break-after: always"></div>
 
 ### 12.1 getAgendaDay
 
