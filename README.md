@@ -1591,9 +1591,15 @@ public class GenericResourceModel: Codable {
 
 <div style="page-break-after: always"></div>
 
-## 11.0 Update position
+## 11.0 Position
 
-In the case that integrator needs to trace continuous update of the user position, SynapsesSDK provides a way to do that.
+SynapsesSDK is capable of tracking user position through multiple methods, depending on the specific requirements of the integrator and the operating environment. In particular, it supports two main behaviors: precise foreground location tracking and approximate foreground/background location tracking.
+
+
+
+### 11.0 Update precise position
+
+In the case that integrator needs to trace continuous and accurate update of the user position, SynapsesSDK provides a way to do that.
 
 ```swift
 public func startNotifyRegionChanges(with tags: [String],
@@ -1602,6 +1608,8 @@ public func startNotifyRegionChanges(with tags: [String],
                                 onValueChanged: PositionSSEValueChangedHandler? = nil,
                                        onCheck: PositionSSECheckHandler? = nil) -> SSEManager?
 ```
+
+
 
 **startNotifyRegionChanges** initialize and start an SSEManager which unique scope is to return changing position for the **tags** passed as first parameter.
 
@@ -1626,6 +1634,7 @@ In the callback, the ResponseMessage expected, contains a Payload in the form of
 ```swift
 public func getRoomsCoordinates() async throws -> [BGPRegion]
 ```
+
 - Model references:
 
 ```swift
@@ -1796,7 +1805,7 @@ public struct AreaWithTagsInside: Codable {
 
 <div style="page-break-after: always"></div>
 
-## 11.1 Get current position
+### 11.1 Get current position
 
 In the case that integrator needs to get actual position of a specific `tagID`, SynapsesSDK provides a way to do that.
 
@@ -1807,6 +1816,45 @@ public func getCurrentPosition(_ tagID: String) async throws -> MapPositionModel
 **getCurrentPosition** return the actual position (if any) of the specified tag.
 
 If no position is present at the moment, the call throws with a 404 (not found) error.
+
+
+
+### 11.2 Background position tracking
+
+If the integrator needs to track the user’s position while the application is running in the background or is closed, SynapsesSDK provides specific functionalities to support this use case.
+
+> [!NOTE]
+>
+> Ensure that the environment is properly configured to handle this functionality. If in doubt, please contact our technical support for assistance with the required environment configuration.
+
+To operate correctly, the system leverages the concept of Beacons, adding an additional layer of precision to entry, exit, and proximity logic through an AI-based engine specifically trained for this scenario. The result is a system capable of determining transit, entry, exit, and proximity zones with a high degree of accuracy.
+
+When the environment hardware is configured properly, you can ask the server to track the user within the configured environment by using the following SDK call:
+
+```swift
+Task { @MainActor in
+    try? await BlueGPS.shared.startTrackingUserPosition { event, location, reason in
+        print("Beacon event: \(event.rawValue) \(location.id) – \(reason.description)")
+    } onError: { error in
+        print(error)
+    }
+}
+```
+
+
+
+The method is named `startTrackingUserPosition` and you should provide two closure:
+
+- `onBeaconDiscovered`:  `(BeaconEventType, BeaconLocation, BeaconEmitReason) -> Void`
+- `onError`: `(Error) -> Void`
+  
+  
+
+> [!NOTE]
+>
+> Since background tracking can continue even when the app is closed or the iPhone is restarted, you must ensure that the `startTrackingUserPosition` method and its associated callbacks are correctly restored when the app is reopened.
+>
+> This could involve the use of specific `AppDelegate` patterns or, in case of SwiftUI, a specific crafted init for the `@main` App scene.
 
 
 
