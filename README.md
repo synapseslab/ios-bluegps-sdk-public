@@ -1331,7 +1331,7 @@ where the params of this function are:
 
 
 
-### 7.1 Notify position changes
+### 7.2 Notify position changes
 
 BlueGPS is able to detect position event changes when the user move inside a building. The SDK expose a specific call `startNotifyPositionChanges(..)` .
 
