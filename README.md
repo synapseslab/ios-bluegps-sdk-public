@@ -1331,7 +1331,33 @@ where the params of this function are:
 
 
 
-### 7.2 Notify generic events
+### 7.1 Notify position changes
+
+BlueGPS is able to detect position event changes when the user move inside a building. The SDK expose a specific call `startNotifyPositionChanges(..)` .
+
+```swift
+startNotifyPositionChanges(with tags: [String],
+                            checkTimeout: Int = 30000,
+                            onValueChanged: PositionSSEValueChangedHandler? = nil)
+-> SSEManager?
+```
+
+where the params of this function are:
+
+- `tags` a list of tags to monitoring;
+- `onValueChanged` callback that return a dictionary in the form ``([String: [MapPostionModel]]?)`` that contains the positions where the tags are currently located.
+
+> [!IMPORTANT]
+>
+> All ``SSEManager`` instances could be stopped at any time, by invoking the following code onto the instance:
+>
+> ```swift
+> sseManagerInstance.removeAllListenersAndDisconnect()
+> ```
+
+
+
+### 7.3 Notify generic events
 
 BlueGPS could notify generic event produced by your custom integration. The relevant call to activate the generic event detection is the following:
 
