@@ -17,7 +17,7 @@ let package = Package(
         .binaryTarget(
             name: "ios-bluegps-sdk-public",
             url: "https://github.com/synapseslab/bluegps-ios-sdk/raw/2.0.117/xcframework.zip",
-            checksum: "f5c825f418f8c276f0fa77933b450964342f87b99e24b085db2e96f2167549d1"
+            checksum: "dad65e0751a6acc16cd7e9e09ad0a161124ad8e91161f250f14878628e82df7a"
         ),
     ]
 )
