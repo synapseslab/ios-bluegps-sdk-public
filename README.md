@@ -1858,6 +1858,36 @@ The method is named `startTrackingUserPosition` and you should provide two closu
 
 
 
+### 11.3 Navigate
+
+If the integrator needs to draw on custom maps a navigation path from user position to a specific destination, there is an API for that named `navigate(with path: PathModel)`.
+
+You should provide a `PathModel` consisting of source and destination in the form of `MapPositionModel`.
+
+The result is a new PathModel, containing also the Vertex needed for correct drawing on screen.
+
+```swift
+Task { @MainActor in
+    do {
+        let response = try await BlueGPS.shared.search(Filter(search: "Parking"))
+        if let firstPark = response.first,
+           let destinationPosition = firstPark.position
+        {
+            let path = PathModel(source: currentPosition, dest: destinationPosition)
+            let vertextPathResponse = try await BlueGPS.shared.navigate(with: path)
+						//do something with vertex array
+        }
+    } catch {
+        print(error)
+    }
+}
+
+```
+
+
+
+
+
 # 12.0 Booking
 
 BlueGPS provides several built-in capabilities for handling the booking workflow in your environment.
