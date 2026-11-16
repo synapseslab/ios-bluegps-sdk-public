@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 330" width="920" height="330" role="img" aria-label="Two ways a position reaches the SDK. By default, the BlueGPS antennas: the SDK broadcasts a tag, the antennas pick it up, and the BlueGPS server computes the position, which the map shows. Or a supported positioning system on the device, from the magnetic field and the device's sensors or from beacons in the building: your app hands each fix to BGPSPositionCoordinator, which posts it to the map.">
+  <defs><marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6e7681"/></marker><marker id="tail" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#6e7681"/></marker></defs>
+  <rect x="8" y="32" width="580" height="88" rx="12" fill="#0f141a" stroke="none" stroke-width="1.5"/>
+  <text x="20" y="22" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="start">The default: the BlueGPS antennas</text>
+  <rect x="24" y="46" width="230" height="60" rx="10" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+  <text x="40" y="72" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="start">A tag the device broadcasts</text>
+  <text x="40" y="92" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">startAdvertising(), in the SDK</text>
+  <rect x="320" y="46" width="250" height="60" rx="10" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+  <text x="336" y="72" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="start">BlueGPS antennas</text>
+  <text x="336" y="92" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">pick up the tag</text>
+  <polyline points="256,76 318,76" fill="none" stroke="#6e7681" stroke-width="1.6" marker-end="url(#head)"/>
+  <text x="287" y="68" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle">Bluetooth</text>
+  <rect x="8" y="152" width="580" height="168" rx="12" fill="#0f141a" stroke="none" stroke-width="1.5"/>
+  <text x="20" y="142" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="start">Or a supported positioning system, on the device</text>
+  <rect x="24" y="168" width="230" height="60" rx="10" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+  <text x="40" y="194" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="start">Magnetic field</text>
+  <text x="40" y="214" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">and the device's sensors</text>
+  <rect x="24" y="244" width="230" height="60" rx="10" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+  <text x="40" y="270" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="start">Beacons in the building</text>
+  <text x="40" y="290" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">that the device listens to</text>
+  <rect x="320" y="206" width="250" height="60" rx="10" fill="#3c74e5" stroke="none" stroke-width="1.5"/>
+  <text x="336" y="232" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="600" text-anchor="start">BGPSPositionCoordinator</text>
+  <text x="336" y="252" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400" text-anchor="start">newPositionAvailable(_:)</text>
+  <polyline points="256,198 318,226" fill="none" stroke="#6e7681" stroke-width="1.6" marker-end="url(#head)"/>
+  <polyline points="256,274 318,246" fill="none" stroke="#6e7681" stroke-width="1.6" marker-end="url(#head)"/>
+  <text x="272" y="240" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">fixes</text>
+  <rect x="650" y="46" width="254" height="60" rx="10" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+  <text x="666" y="72" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="start">BlueGPS server</text>
+  <text x="666" y="92" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">computes it, serves live data</text>
+  <rect x="650" y="206" width="254" height="60" rx="10" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+  <text x="666" y="232" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="start">DynamicMapView</text>
+  <text x="666" y="252" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">shows the device's position</text>
+  <polyline points="572,76 648,76" fill="none" stroke="#6e7681" stroke-width="1.6" marker-end="url(#head)"/>
+  <text x="618" y="68" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle">readings</text>
+  <polyline points="572,236 648,236" fill="none" stroke="#6e7681" stroke-width="1.6" marker-end="url(#head)"/>
+  <text x="618" y="228" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle">posted</text>
+  <polyline points="777,108 777,204" fill="none" stroke="#6e7681" stroke-width="1.6" marker-end="url(#head)"/>
+  <text x="785" y="160" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">the tag's position</text>
+</svg>

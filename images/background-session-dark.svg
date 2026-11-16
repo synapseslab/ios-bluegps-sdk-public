@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 306" width="900" height="306" role="img" aria-label="A background session: in the foreground the app calls start and startAdvertising, and the SDK shows the app's Live Activity. With the screen locked the app keeps running and each content value reaches the Live Activity, at most one a second. stop or a logout ends the Live Activity and stops advertising.">
+  <defs><marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6e7681"/></marker><marker id="tail" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#6e7681"/></marker></defs>
+  <rect x="132" y="30" width="252" height="268" rx="12" fill="#0f141a" stroke="none" stroke-width="1.5"/>
+  <text x="144" y="20" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="start">Foreground</text>
+  <rect x="400" y="30" width="292" height="268" rx="12" fill="#0f141a" stroke="none" stroke-width="1.5"/>
+  <text x="412" y="20" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="start">Background, screen locked</text>
+  <rect x="708" y="30" width="176" height="268" rx="12" fill="#0f141a" stroke="none" stroke-width="1.5"/>
+  <text x="720" y="20" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="start">End</text>
+  <text x="16" y="80" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="start">Your app</text>
+  <text x="16" y="168" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="start">SynapsesSDK</text>
+  <text x="16" y="256" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="start">Lock Screen</text>
+  <rect x="144" y="44" width="236" height="64" rx="10" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+  <text x="156" y="70" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400" text-anchor="start">session.start(…)</text>
+  <text x="156" y="90" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400" text-anchor="start">startAdvertising()</text>
+  <rect x="144" y="132" width="236" height="64" rx="10" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+  <text x="156" y="158" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="start">Requests the Live Activity</text>
+  <text x="156" y="178" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">advertising on</text>
+  <rect x="144" y="220" width="236" height="64" rx="10" fill="#3c74e5" stroke="none" stroke-width="1.5"/>
+  <text x="156" y="246" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="start">Your Live Activity</text>
+  <text x="156" y="266" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">appears</text>
+  <polyline points="262,108 262,130" fill="none" stroke="#6e7681" stroke-width="1.6" marker-end="url(#head)"/>
+  <polyline points="262,196 262,218" fill="none" stroke="#6e7681" stroke-width="1.6" marker-end="url(#head)"/>
+  <rect x="412" y="44" width="276" height="64" rx="10" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+  <text x="424" y="70" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400" text-anchor="start">continuation.yield(…)</text>
+  <text x="424" y="90" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">whenever the content changes</text>
+  <rect x="412" y="132" width="276" height="64" rx="10" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+  <text x="424" y="158" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="start">App kept running</text>
+  <text x="424" y="178" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">≤ 1 update a second, newest wins</text>
+  <rect x="412" y="220" width="276" height="64" rx="10" fill="#3c74e5" stroke="none" stroke-width="1.5"/>
+  <text x="424" y="246" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="start">Content updates</text>
+  <text x="424" y="266" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">on the Lock Screen and the Island</text>
+  <polyline points="550,108 550,130" fill="none" stroke="#6e7681" stroke-width="1.6" marker-end="url(#head)"/>
+  <polyline points="550,196 550,218" fill="none" stroke="#6e7681" stroke-width="1.6" marker-end="url(#head)"/>
+  <rect x="720" y="44" width="164" height="64" rx="10" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+  <text x="732" y="70" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400" text-anchor="start">stop()</text>
+  <text x="732" y="90" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400" text-anchor="start">or logout()</text>
+  <rect x="720" y="132" width="164" height="64" rx="10" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+  <text x="732" y="158" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="start">Advertising off</text>
+  <text x="732" y="178" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">session idle</text>
+  <rect x="720" y="220" width="164" height="64" rx="10" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+  <text x="732" y="246" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="start">Live Activity</text>
+  <text x="732" y="266" fill="#9198a1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">removed</text>
+  <polyline points="802,108 802,130" fill="none" stroke="#6e7681" stroke-width="1.6" marker-end="url(#head)"/>
+  <polyline points="802,196 802,218" fill="none" stroke="#6e7681" stroke-width="1.6" marker-end="url(#head)"/>
+</svg>
