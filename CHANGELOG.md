@@ -13,6 +13,17 @@ you see. Entries are newest first.
 
 ---
 
+## 3.0.1
+
+### Changed — behaviour
+
+- **`startAdvertising` waits for Bluetooth, as `startAdvertisingRegion` always
+  did.** With Bluetooth off or not authorized it still throws `bluetoothOff` or
+  `bluetoothNotAuthorized`, and now keeps the start pending: advertising begins
+  by itself once Bluetooth powers on, and `advertising` turns `on`.
+  `stopAdvertising()` drops a pending start. Before, such a start was dropped,
+  and the app had to call `startAdvertising` again.
+
 ## 3.0.0
 
 The first release of the **3.0** series, after 2.0.123. Rebuild your app against it:

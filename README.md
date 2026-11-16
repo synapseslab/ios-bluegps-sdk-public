@@ -1,13 +1,13 @@
-# SynapsesSDK 3.0.0
+# SynapsesSDK 3.0.1
 
 Indoor positioning, maps and facility services from BlueGPS, for iOS 17.0 and later.
 
 | | |
 |---|---|
-| **Swift package** | `https://github.com/synapseslab/ios-bluegps-sdk-public`, version `3.0.0` |
-| **Binary** | [`xcframework.zip`](https://github.com/synapseslab/ios-bluegps-sdk-public/releases/download/3.0.0/xcframework.zip), the XCFramework the package downloads |
+| **Swift package** | `https://github.com/synapseslab/ios-bluegps-sdk-public`, version `3.0.1` |
+| **Binary** | [`xcframework.zip`](https://github.com/synapseslab/ios-bluegps-sdk-public/releases/download/3.0.1/xcframework.zip), the XCFramework the package downloads |
 | **Documentation** | [The SDK's documentation](https://synapseslab.com/ios-bluegps-sdk-public/documentation/synapsessdk/): guides and every symbol |
-| **Sample app** | [`BlueGPS-SampleApp-3.0.0.zip`](https://github.com/synapseslab/ios-bluegps-sdk-public/releases/download/3.0.0/BlueGPS-SampleApp-3.0.0.zip), the source of a SwiftUI app that uses the SDK |
+| **Sample app** | [`BlueGPS-SampleApp-3.0.1.zip`](https://github.com/synapseslab/ios-bluegps-sdk-public/releases/download/3.0.1/BlueGPS-SampleApp-3.0.1.zip), the source of a SwiftUI app that uses the SDK |
 | **What changed** | [CHANGELOG](CHANGELOG.md) |
 
 ## What it does
@@ -42,7 +42,7 @@ package manifest:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/synapseslab/ios-bluegps-sdk-public", from: "3.0.0"),
+    .package(url: "https://github.com/synapseslab/ios-bluegps-sdk-public", from: "3.0.1"),
 ],
 targets: [
     .target(name: "MyApp", dependencies: [
@@ -192,7 +192,7 @@ sign-in, tag advertising, a background session with its Live Activity, the map w
 search, floors and directions, areas, room and position monitoring, and a log. Put your
 installation's values in its `Config/Sample.xcconfig`, then build and run on a device.
 Its source is attached to every release:
-[`BlueGPS-SampleApp-3.0.0.zip`](https://github.com/synapseslab/ios-bluegps-sdk-public/releases/download/3.0.0/BlueGPS-SampleApp-3.0.0.zip).
+[`BlueGPS-SampleApp-3.0.1.zip`](https://github.com/synapseslab/ios-bluegps-sdk-public/releases/download/3.0.1/BlueGPS-SampleApp-3.0.1.zip).
 
 ## Documentation
 
@@ -209,7 +209,7 @@ Its source is attached to every release:
 ## Upgrading from 2.0
 
 - If your dependency rule starts from 5.0.0, change it to *Up to Next Major Version* from
-  3.0.0. The tag `v5.0.0` carried 2.0.109 and has been removed.
+  3.0.1. The tag `v5.0.0` carried 2.0.109 and has been removed.
 - Rebuild your app against this version: some methods changed their binary interface.
 - iOS 17 is the minimum.
 - `startAdvertisingRegion` and `stopAdvertisingRegion` are deprecated: use
